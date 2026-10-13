@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Exporter vers Excel</title>
+    <!-- مكتبات ضرورية -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; padding: 15px; background-color: #f3f2f1; }
+        .container { background-color: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn { background-color: #107c41; color: white; border: none; padding: 10px 15px; cursor: pointer; width: 100%; margin-top: 15px; border-radius: 3px; font-weight: bold;}
+        .btn:hover { background-color: #0b5a2f; }
+        #status { margin-top: 15px; font-weight: bold; color: #333; font-size: 14px; text-align: center;}
+        .info-box { font-size: 13px; color: #333; margin-top: 15px; background: #e1dfdd; padding: 10px; border-radius: 3px;}
+        h3 { margin-top: 0; color: #107c41; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>تصدير للإكسيل (MGX)</h3>
+        
+        <div class="info-box" id="emailInfo">
+            جاري استخراج بيانات الإيميل...
+        </div>
+
+        <p style="font-size: 14px; margin-top: 15px;">1. يرجى اختيار ملف: <b>09 Registre de suivis...</b></p>
+        <input type="file" id="fileInput" accept=".xlsx, .xls" style="width: 100%;" />
+        
+        <button class="btn" id="processBtn">2. تصدير (Exporter) وتحميل الملف</button>
+        
+        <div id="status"></div>
+    </div>
+
+    <script src="taskpane.js"></script>
+</body>
+</html>
